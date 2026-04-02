@@ -1,6 +1,309 @@
-<ul class="collection with-header">
-    <li class="collection-header"><h4>Lo que hemos hecho:</h4></li>
-    <li class="collection-item">Levantamiento de requisitos en el SENA.</li>
-    <li class="collection-item">Creación de Historias de Usuario.</li>
-    <li class="collection-item">Estimación de costos (Planning Poker).</li>
-</ul>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avances — UX·Lab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">UX·Lab <span>/ Proyecto Integrador</span></a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+    <li><a href="nosotros.html"><i class="material-icons">group</i>Nosotros</a></li>
+    <li><a href="objetivos.html"><i class="material-icons">flag</i>Objetivos</a></li>
+    <li><a href="avances.html"><i class="material-icons">timeline</i>Avances</a></li>
+    <li><a href="contacto.html"><i class="material-icons">mail</i>Contacto</a></li>
+  </ul>
+
+  <!-- ══ PAGE HERO ════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label" style="position:relative;z-index:1;">Lo que hemos logrado</div>
+      <h1>Avances del proyecto</h1>
+      <p>Seguimiento detallado del progreso por fases y entregables.</p>
+    </div>
+  </section>
+
+  <!-- ══ PROGRESO GLOBAL ══════════════════════════════════════════════════ -->
+  <section class="section-block white">
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s12 m8 fade-in">
+          <div class="section-label">Progreso general</div>
+          <h2 class="section-title">Estado del proyecto</h2>
+          <p style="color:var(--text-muted);line-height:1.7;margin-bottom:2rem;">
+            El proyecto avanza según el cronograma planificado. A continuación se muestra
+            el progreso acumulado por fase de desarrollo.
+          </p>
+          <div style="margin-bottom:1.25rem;">
+            <div class="progress-label"><span>Investigación UX</span><span>100%</span></div>
+            <div class="progress"><div class="determinate" style="width:100%"></div></div>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <div class="progress-label"><span>Arquitectura de información</span><span>90%</span></div>
+            <div class="progress"><div class="determinate" style="width:90%"></div></div>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <div class="progress-label"><span>Prototipado (Figma)</span><span>75%</span></div>
+            <div class="progress"><div class="determinate" style="width:75%"></div></div>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <div class="progress-label"><span>Implementación frontend</span><span>60%</span></div>
+            <div class="progress"><div class="determinate" style="width:60%"></div></div>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <div class="progress-label"><span>Evaluación y pruebas</span><span>20%</span></div>
+            <div class="progress"><div class="determinate" style="width:20%"></div></div>
+          </div>
+        </div>
+        <div class="col s12 m4 center-align fade-in fade-in-delay-2">
+          <div style="font-family:'Space Mono',monospace;font-size:4.5rem;font-weight:700;color:var(--accent);line-height:1;">80<span style="font-size:2rem;">%</span></div>
+          <div style="font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);">Avance total</div>
+          <div style="margin-top:1.5rem;">
+            <!-- Botón con interacción JS: cambiar color de fondo -->
+            <button id="toggle-color-btn" class="btn btn-primary-custom waves-effect" style="display:block;margin:0 auto;width:100%;max-width:200px;">
+              <i class="material-icons left">palette</i>Cambiar tema
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CARDS DE AVANCES ══════════════════════════════════════════════════ -->
+  <section class="section-block light" id="avances-section">
+    <div class="container">
+      <div class="section-label fade-in">Por fases</div>
+      <h2 class="section-title fade-in">Detalle de avances</h2>
+
+      <!-- Materialize Grid System -->
+      <div class="row" style="margin-top:2rem;">
+
+        <!-- Avance 1 -->
+        <div class="col s12 m6 l4 fade-in">
+          <div class="avance-card">
+            <div class="avance-card-header">
+              <div class="avance-number">01</div>
+              <div>
+                <h5>Investigación con usuarios</h5>
+                <span class="tag-badge tag-done">Completado</span>
+              </div>
+            </div>
+            <div class="avance-card-body">
+              <p>Entrevistas con 23 estudiantes y 4 docentes. Identificados 7 pain points críticos en la orientación académica actual.</p>
+              <div id="detail-1" style="display:none;">
+                <p style="border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;">
+                  <strong>Entregables:</strong> Informe de investigación (18 pág.), mapa de empatía, 5 personas primarias, journey map principal.
+                </p>
+                <p><strong>Herramientas:</strong> Formularios Google, Notion, Miro.</p>
+              </div>
+              <button class="btn btn-outline-custom waves-effect toggle-detail-btn" data-target="detail-1" style="font-size:.65rem;height:36px;line-height:34px;padding:0 1rem;">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avance 2 -->
+        <div class="col s12 m6 l4 fade-in fade-in-delay-1">
+          <div class="avance-card">
+            <div class="avance-card-header">
+              <div class="avance-number">02</div>
+              <div>
+                <h5>Arquitectura de información</h5>
+                <span class="tag-badge tag-done">Completado</span>
+              </div>
+            </div>
+            <div class="avance-card-body">
+              <p>Definida la estructura de navegación mediante card sorting con 15 participantes y árbol de contenidos validado.</p>
+              <div id="detail-2" style="display:none;">
+                <p style="border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;">
+                  <strong>Entregables:</strong> Mapa de sitio, flujos de usuario para 3 tareas principales, taxonomía de contenidos.
+                </p>
+                <p><strong>Herramientas:</strong> Optimal Workshop, Figma FigJam.</p>
+              </div>
+              <button class="btn btn-outline-custom waves-effect toggle-detail-btn" data-target="detail-2" style="font-size:.65rem;height:36px;line-height:34px;padding:0 1rem;">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avance 3 -->
+        <div class="col s12 m6 l4 fade-in fade-in-delay-2">
+          <div class="avance-card">
+            <div class="avance-card-header">
+              <div class="avance-number">03</div>
+              <div>
+                <h5>Wireframes y prototipo Lo-Fi</h5>
+                <span class="tag-badge tag-done">Completado</span>
+              </div>
+            </div>
+            <div class="avance-card-body">
+              <p>Diseñados 24 pantallas en baja fidelidad y validados con primera ronda de pruebas de usabilidad.</p>
+              <div id="detail-3" style="display:none;">
+                <p style="border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;">
+                  <strong>Entregables:</strong> 24 wireframes, reporte de pruebas (8 participantes), lista de mejoras priorizadas.
+                </p>
+                <p><strong>Herramientas:</strong> Figma, Maze.</p>
+              </div>
+              <button class="btn btn-outline-custom waves-effect toggle-detail-btn" data-target="detail-3" style="font-size:.65rem;height:36px;line-height:34px;padding:0 1rem;">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avance 4 -->
+        <div class="col s12 m6 l4 fade-in fade-in-delay-1">
+          <div class="avance-card">
+            <div class="avance-card-header">
+              <div class="avance-number">04</div>
+              <div>
+                <h5>Prototipo Hi-Fi en Figma</h5>
+                <span class="tag-badge tag-progress">En progreso</span>
+              </div>
+            </div>
+            <div class="avance-card-body">
+              <p>Sistema de diseño con 40+ componentes. Actualmente en segunda ronda de pruebas de usabilidad con 10 participantes.</p>
+              <div id="detail-4" style="display:none;">
+                <p style="border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;">
+                  <strong>Pendiente:</strong> Finalizar pantallas de perfil y notificaciones. Aplicar correcciones ronda 2.
+                </p>
+                <p><strong>Herramientas:</strong> Figma, Design Tokens, Auto Layout.</p>
+              </div>
+              <button class="btn btn-outline-custom waves-effect toggle-detail-btn" data-target="detail-4" style="font-size:.65rem;height:36px;line-height:34px;padding:0 1rem;">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avance 5 -->
+        <div class="col s12 m6 l4 fade-in fade-in-delay-2">
+          <div class="avance-card">
+            <div class="avance-card-header">
+              <div class="avance-number">05</div>
+              <div>
+                <h5>Implementación frontend</h5>
+                <span class="tag-badge tag-progress">En progreso</span>
+              </div>
+            </div>
+            <div class="avance-card-body">
+              <p>Desarrolladas las vistas principales del sitio. Pendiente integración de funcionalidades dinámicas y ajustes de accesibilidad.</p>
+              <div id="detail-5" style="display:none;">
+                <p style="border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;">
+                  <strong>Completado:</strong> Home, perfil, listado de servicios. <br>
+                  <strong>Pendiente:</strong> Buscador, notificaciones, formulario de citas.
+                </p>
+                <p><strong>Tecnologías:</strong> HTML5, CSS3, JS, Materialize.</p>
+              </div>
+              <button class="btn btn-outline-custom waves-effect toggle-detail-btn" data-target="detail-5" style="font-size:.65rem;height:36px;line-height:34px;padding:0 1rem;">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avance 6 -->
+        <div class="col s12 m6 l4 fade-in fade-in-delay-3">
+          <div class="avance-card">
+            <div class="avance-card-header">
+              <div class="avance-number">06</div>
+              <div>
+                <h5>Evaluación SUS y cierre</h5>
+                <span class="tag-badge tag-pending">Pendiente</span>
+              </div>
+            </div>
+            <div class="avance-card-body">
+              <p>Aplicación del cuestionario SUS y métricas de tarea completada con al menos 15 usuarios sobre el prototipo final.</p>
+              <div id="detail-6" style="display:none;">
+                <p style="border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;">
+                  <strong>Meta:</strong> SUS ≥ 70 puntos. Tasa de éxito en tareas ≥ 80%. Informe final de 25+ páginas.
+                </p>
+              </div>
+              <button class="btn btn-outline-custom waves-effect toggle-detail-btn" data-target="detail-6" style="font-size:.65rem;height:36px;line-height:34px;padding:0 1rem;">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end row -->
+    </div>
+  </section>
+
+  <!-- ══ COLLECTIONS — Timeline ═══════════════════════════════════════════ -->
+  <section class="section-block dark">
+    <div class="container">
+      <div class="section-label fade-in">Cronograma</div>
+      <h2 class="section-title light fade-in">Línea de tiempo</h2>
+      <div class="row" style="margin-top:2rem;">
+        <div class="col s12 m8 offset-m2 fade-in">
+          <ul class="collection" style="border:1px solid rgba(255,255,255,.1);border-radius:4px;background:rgba(255,255,255,.04);">
+            <li class="collection-item" style="background:transparent;border-bottom:1px solid rgba(255,255,255,.08);">
+              <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:.1em;display:block;margin-bottom:.25rem;">Semana 1–2</span>
+              <span style="color:white;font-weight:600;">Investigación con usuarios</span>
+              <span class="badge new" style="background:var(--accent);color:var(--primary);font-family:'Space Mono',monospace;font-size:.6rem;border-radius:2px;">✓ Lista</span>
+            </li>
+            <li class="collection-item" style="background:transparent;border-bottom:1px solid rgba(255,255,255,.08);">
+              <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:.1em;display:block;margin-bottom:.25rem;">Semana 3–4</span>
+              <span style="color:white;font-weight:600;">Arquitectura y flujos</span>
+              <span class="badge new" style="background:var(--accent);color:var(--primary);font-family:'Space Mono',monospace;font-size:.6rem;border-radius:2px;">✓ Lista</span>
+            </li>
+            <li class="collection-item" style="background:transparent;border-bottom:1px solid rgba(255,255,255,.08);">
+              <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:.1em;display:block;margin-bottom:.25rem;">Semana 5–7</span>
+              <span style="color:white;font-weight:600;">Prototipado y pruebas usabilidad</span>
+              <span class="badge new" style="background:rgba(0,229,192,.3);color:var(--accent);font-family:'Space Mono',monospace;font-size:.6rem;border-radius:2px;">En curso</span>
+            </li>
+            <li class="collection-item" style="background:transparent;border-bottom:1px solid rgba(255,255,255,.08);">
+              <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:.1em;display:block;margin-bottom:.25rem;">Semana 8–10</span>
+              <span style="color:white;font-weight:600;">Implementación frontend</span>
+              <span class="badge new" style="background:rgba(0,229,192,.3);color:var(--accent);font-family:'Space Mono',monospace;font-size:.6rem;border-radius:2px;">En curso</span>
+            </li>
+            <li class="collection-item" style="background:transparent;">
+              <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:.1em;display:block;margin-bottom:.25rem;">Semana 11–12</span>
+              <span style="color:rgba(255,255,255,.5);font-weight:600;">Evaluación y entrega final</span>
+              <span class="badge new" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.4);font-family:'Space Mono',monospace;font-size:.6rem;border-radius:2px;">Próximo</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="footer-brand">UX·Lab</div>
+          <p class="footer-desc">Proyecto Integrador I — Ingeniería de Sistemas<br>Universidad del Valle, Sede Tuluá</p>
+        </div>
+        <div class="col s12 m4 offset-m4">
+          <div class="footer-label">Páginas</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="objetivos.html">Objetivos</a></li>
+            <li><a href="avances.html">Avances</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 UX·Lab — Proyecto Integrador I</span>
+        <span>Docente: Mg(c). Juan Pablo Pinillos Reina</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

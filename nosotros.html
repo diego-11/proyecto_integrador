@@ -1,10 +1,182 @@
-<div class="row">
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-content">
-          <span class="card-title">Juan Sebastián</span>
-          <p>Rol: Analista de Requisitos</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros — UX·Lab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">UX·Lab <span>/ Proyecto Integrador</span></a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+    <li><a href="nosotros.html"><i class="material-icons">group</i>Nosotros</a></li>
+    <li><a href="objetivos.html"><i class="material-icons">flag</i>Objetivos</a></li>
+    <li><a href="avances.html"><i class="material-icons">timeline</i>Avances</a></li>
+    <li><a href="contacto.html"><i class="material-icons">mail</i>Contacto</a></li>
+  </ul>
+
+  <!-- ══ PAGE HERO ════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label" style="position:relative;z-index:1;">El equipo</div>
+      <h1>Quiénes somos</h1>
+      <p>Estudiantes de Ingeniería de Sistemas apasionados por el diseño y la tecnología.</p>
+    </div>
+  </section>
+
+  <!-- ══ MISIÓN Y VISIÓN ══════════════════════════════════════════════════ -->
+  <section class="section-block light">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 fade-in">
+          <div class="mv-card">
+            <div class="mv-icon"><i class="material-icons">explore</i></div>
+            <div class="mv-title">Misión</div>
+            <p class="mv-text">
+              Desarrollar soluciones digitales innovadoras centradas en el usuario, aplicando
+              metodologías de diseño UX/UI y principios de accesibilidad para mejorar la
+              experiencia de las personas con la tecnología. Nuestro trabajo integra
+              investigación, prototipado y validación continua para crear productos que
+              generen valor real.
+            </p>
+          </div>
+        </div>
+        <div class="col s12 m6 fade-in fade-in-delay-1">
+          <div class="mv-card" style="background:var(--accent);">
+            <div class="mv-icon" style="color:var(--primary);"><i class="material-icons">visibility</i></div>
+            <div class="mv-title" style="color:var(--primary);opacity:.7;">Visión</div>
+            <p class="mv-text" style="color:var(--primary);">
+              Convertirnos en referentes de diseño centrado en el usuario dentro de nuestra
+              institución, formando profesionales capaces de liderar proyectos de transformación
+              digital que pongan a las personas en el centro de cada decisión tecnológica. Para
+              2026, esperamos tener un producto funcional validado con usuarios reales.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ══ EQUIPO ════════════════════════════════════════════════════════════ -->
+  <section class="section-block white">
+    <div class="container">
+      <div class="section-label fade-in">Integrantes</div>
+      <h2 class="section-title fade-in">El equipo de trabajo</h2>
+      <p style="color:var(--text-muted);max-width:520px;margin-bottom:3rem;line-height:1.7;" class="fade-in">
+        Cuatro estudiantes con perfiles complementarios que colaboran para llevar el proyecto
+        de la idea al prototipo funcional.
+      </p>
+
+      <!-- Materialize Cards — equipo -->
+      <div class="row">
+        <div class="col s12 m6 l3 fade-in">
+          <div class="team-card">
+            <div class="team-avatar">AL</div>
+            <div class="team-name">Ana López</div>
+            <div class="team-role">UX Researcher</div>
+            <p class="team-desc">Lidera la investigación con usuarios, entrevistas y análisis de datos cualitativos para identificar necesidades reales.</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l3 fade-in fade-in-delay-1">
+          <div class="team-card">
+            <div class="team-avatar">CM</div>
+            <div class="team-name">Carlos Muñoz</div>
+            <div class="team-role">UI Designer</div>
+            <p class="team-desc">Responsable del diseño visual, sistema de componentes, guía de estilos y prototipado en Figma.</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l3 fade-in fade-in-delay-2">
+          <div class="team-card">
+            <div class="team-avatar">LR</div>
+            <div class="team-name">Laura Ríos</div>
+            <div class="team-role">Frontend Dev</div>
+            <p class="team-desc">Desarrolla la implementación web del proyecto, garantizando accesibilidad y rendimiento en todos los dispositivos.</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l3 fade-in fade-in-delay-3">
+          <div class="team-card">
+            <div class="team-avatar">JT</div>
+            <div class="team-name">Juan Torres</div>
+            <div class="team-role">Project Lead</div>
+            <p class="team-desc">Coordina el equipo, gestiona los sprints, documenta el proceso y asegura el cumplimiento de los objetivos académicos.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- ══ VALORES ══════════════════════════════════════════════════════════ -->
+  <section class="section-block dark">
+    <div class="container">
+      <div class="section-label fade-in">Lo que nos guía</div>
+      <h2 class="section-title light fade-in">Nuestros valores</h2>
+      <div class="row" style="margin-top:2.5rem;">
+        <div class="col s12 m4 fade-in">
+          <div style="padding:1.5rem;border-left:3px solid var(--accent);margin-bottom:1rem;">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;color:white;margin-bottom:.5rem;">Empatía</div>
+            <p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0;">Diseñamos siempre desde la perspectiva del usuario, entendiendo sus necesidades antes de proponer soluciones.</p>
+          </div>
+        </div>
+        <div class="col s12 m4 fade-in fade-in-delay-1">
+          <div style="padding:1.5rem;border-left:3px solid var(--accent);margin-bottom:1rem;">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;color:white;margin-bottom:.5rem;">Iteración</div>
+            <p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0;">Creemos en mejorar continuamente. Cada versión del proyecto incorpora aprendizajes de la anterior.</p>
+          </div>
+        </div>
+        <div class="col s12 m4 fade-in fade-in-delay-2">
+          <div style="padding:1.5rem;border-left:3px solid var(--accent);margin-bottom:1rem;">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;color:white;margin-bottom:.5rem;">Colaboración</div>
+            <p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0;">El trabajo en equipo y la comunicación abierta son la base de nuestros mejores resultados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="footer-brand">UX·Lab</div>
+          <p class="footer-desc">Proyecto Integrador I — Ingeniería de Sistemas<br>Universidad del Valle, Sede Tuluá</p>
+        </div>
+        <div class="col s12 m4 offset-m4">
+          <div class="footer-label">Páginas</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="objetivos.html">Objetivos</a></li>
+            <li><a href="avances.html">Avances</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 UX·Lab — Proyecto Integrador I</span>
+        <span>Docente: Mg(c). Juan Pablo Pinillos Reina</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

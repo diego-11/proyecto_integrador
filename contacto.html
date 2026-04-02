@@ -1,6 +1,248 @@
-<form id="miFormulario">
-    <input type="text" id="nombre" placeholder="Nombre" required>
-    <input type="email" id="correo" placeholder="Correo" required>
-    <textarea id="mensaje" class="materialize-textarea" placeholder="Mensaje"></textarea>
-    <button class="btn" type="submit">Enviar</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — UX·Lab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">UX·Lab <span>/ Proyecto Integrador</span></a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+    <li><a href="nosotros.html"><i class="material-icons">group</i>Nosotros</a></li>
+    <li><a href="objetivos.html"><i class="material-icons">flag</i>Objetivos</a></li>
+    <li><a href="avances.html"><i class="material-icons">timeline</i>Avances</a></li>
+    <li><a href="contacto.html"><i class="material-icons">mail</i>Contacto</a></li>
+  </ul>
+
+  <!-- ══ PAGE HERO ════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label" style="position:relative;z-index:1;">Hablemos</div>
+      <h1>Contacto</h1>
+      <p>¿Dudas, sugerencias o quieres colaborar? Estamos disponibles.</p>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT SECTION ══════════════════════════════════════════════════ -->
+  <section class="section-block light">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 fade-in">
+          <div class="contact-wrapper">
+            <div class="row" style="margin:0;">
+
+              <!-- Info lateral -->
+              <div class="col s12 m5 l4">
+                <div class="contact-info">
+                  <div class="section-label" style="margin-bottom:.75rem;">Datos de contacto</div>
+                  <h3>Ponerse en contacto</h3>
+                  <p>
+                    Puedes escribirnos para resolver dudas sobre el proyecto, proponer mejoras
+                    o coordinar alguna colaboración académica.
+                  </p>
+
+                  <div class="contact-detail">
+                    <i class="material-icons">school</i>
+                    <span>Universidad del Valle, Sede Tuluá</span>
+                  </div>
+                  <div class="contact-detail">
+                    <i class="material-icons">location_on</i>
+                    <span>Tuluá, Valle del Cauca, Colombia</span>
+                  </div>
+                  <div class="contact-detail">
+                    <i class="material-icons">mail</i>
+                    <span>uxlab.proyecto@correounivalle.edu.co</span>
+                  </div>
+                  <div class="contact-detail">
+                    <i class="material-icons">person</i>
+                    <span>Docente: Mg(c). Juan Pablo Pinillos Reina</span>
+                  </div>
+
+                  <!-- Modal trigger -->
+                  <div style="margin-top:2rem;">
+                    <a href="#faq-modal" class="modal-trigger btn btn-outline-custom waves-effect" style="border-color:rgba(255,255,255,.3)!important;color:white!important;display:block;text-align:center;">
+                      <i class="material-icons left" style="color:var(--accent);">help_outline</i>Preguntas frecuentes
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Formulario -->
+              <div class="col s12 m7 l8">
+                <div class="contact-form-panel">
+                  <div class="section-label">Formulario de contacto</div>
+                  <h4>Envíanos un mensaje</h4>
+
+                  <form id="contact-form" novalidate>
+                    <div class="row">
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="nombre" type="text" />
+                        <label for="nombre">Nombre completo *</label>
+                      </div>
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="correo" type="email" />
+                        <label for="correo">Correo electrónico *</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">subject</i>
+                        <input id="asunto" type="text" />
+                        <label for="asunto">Asunto</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="mensaje" class="materialize-textarea"></textarea>
+                        <label for="mensaje">Mensaje * (mínimo 10 caracteres)</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col s12">
+                        <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+                          <!-- Materialize Button estilizado -->
+                          <button type="submit" class="btn btn-primary-custom waves-effect waves-light">
+                            <i class="material-icons left">send</i>Enviar mensaje
+                          </button>
+                          <button type="button" id="reset-form-btn" class="btn btn-outline-custom waves-effect" style="border:1px solid var(--border)!important;color:var(--text-muted)!important;height:46px;line-height:44px;">
+                            Limpiar
+                          </button>
+                        </div>
+                        <p style="font-size:.8rem;color:var(--text-muted);margin-top:1rem;">
+                          * Campos obligatorios. Tu información es confidencial y no será compartida con terceros.
+                        </p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div><!-- end row -->
+          </div><!-- end contact-wrapper -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MAP / LOCATION BAND ══════════════════════════════════════════════ -->
+  <section class="section-block dark">
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s12 m6 fade-in">
+          <div class="section-label">Ubicación</div>
+          <h2 class="section-title light">¿Dónde estamos?</h2>
+          <p style="color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:1.5rem;">
+            Desarrollamos el proyecto en las instalaciones de la Universidad del Valle,
+            Sede Tuluá, en el programa de Ingeniería de Sistemas, como parte del curso
+            Proyecto Integrador I.
+          </p>
+          <div style="font-family:'Space Mono',monospace;font-size:.8rem;color:var(--accent);">
+            Cra. 23 #25-55, Tuluá, Valle del Cauca
+          </div>
+        </div>
+        <div class="col s12 m6 fade-in fade-in-delay-2">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:2rem;text-align:center;">
+            <i class="material-icons" style="font-size:3rem;color:var(--accent);display:block;margin-bottom:1rem;">location_city</i>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;color:white;font-size:1.1rem;margin-bottom:.25rem;">Universidad del Valle</div>
+            <div style="color:rgba(255,255,255,.5);font-size:.875rem;">Sede Tuluá — Ingeniería de Sistemas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MODAL FAQ ═════════════════════════════════════════════════════════ -->
+  <div id="faq-modal" class="modal">
+    <div class="modal-content">
+      <h4 style="font-family:'Syne',sans-serif;font-weight:800;margin-bottom:1.5rem;">Preguntas frecuentes</h4>
+      <div class="obj-item" style="margin-bottom:.75rem;">
+        <div class="obj-content">
+          <h5>¿Cuál es el objetivo del proyecto?</h5>
+          <p>Diseñar e implementar una plataforma de orientación académica centrada en el usuario, aplicando metodologías UX.</p>
+        </div>
+      </div>
+      <div class="obj-item" style="margin-bottom:.75rem;">
+        <div class="obj-content">
+          <h5>¿Quiénes pueden participar como testers?</h5>
+          <p>Estudiantes de pregrado de cualquier programa de la Universidad del Valle, Sede Tuluá.</p>
+        </div>
+      </div>
+      <div class="obj-item" style="margin-bottom:.75rem;">
+        <div class="obj-content">
+          <h5>¿Cuándo finaliza el proyecto?</h5>
+          <p>La entrega final está programada para la semana 12 del semestre académico 2025-2.</p>
+        </div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-content">
+          <h5>¿Cómo puedo colaborar?</h5>
+          <p>Escríbenos a través del formulario de contacto o contacta directamente al equipo del proyecto.</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer" style="padding:1rem 1.5rem;">
+      <a href="#!" class="modal-close btn btn-primary-custom waves-effect">Cerrar</a>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="footer-brand">UX·Lab</div>
+          <p class="footer-desc">Proyecto Integrador I — Ingeniería de Sistemas<br>Universidad del Valle, Sede Tuluá</p>
+        </div>
+        <div class="col s12 m4 offset-m4">
+          <div class="footer-label">Páginas</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="objetivos.html">Objetivos</a></li>
+            <li><a href="avances.html">Avances</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 UX·Lab — Proyecto Integrador I</span>
+        <span>Docente: Mg(c). Juan Pablo Pinillos Reina</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Botón limpiar formulario
+    document.getElementById('reset-form-btn').addEventListener('click', function () {
+      document.getElementById('contact-form').reset();
+      M.updateTextFields();
+    });
+  </script>
+</body>
+</html>

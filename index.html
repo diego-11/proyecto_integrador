@@ -1,38 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Gestión Portafolio SENA</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UX·Lab — Proyecto Integrador</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <nav>
-        <div class="nav-wrapper container">
-            <a href="index.html" class="brand-logo">SENA Portafolio</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="objetivos.html">Objetivos</a></li>
-                <li><a href="avances.html">Avances</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="center-align" style="margin-top: 50px;">
-            <h1>Proyecto de Gestión Académica</h1>
-            <p class="flow-text">Software para la organización de portafolios e instructores líderes del SENA.</p>
-            <img src="https://via.placeholder.com/800x400" class="responsive-img" alt="Imagen del proyecto">
-        </div>
+  <!-- ══ NAVBAR ══════════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">UX·Lab <span>/ Proyecto Integrador</span></a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <footer class="center-align">
-        <p>&copy; 2026 - Proyecto Integrador I - Universidad del Valle Sede Tuluá</p>
-    </footer>
+  <!-- Sidenav mobile -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+    <li><a href="nosotros.html"><i class="material-icons">group</i>Nosotros</a></li>
+    <li><a href="objetivos.html"><i class="material-icons">flag</i>Objetivos</a></li>
+    <li><a href="avances.html"><i class="material-icons">timeline</i>Avances</a></li>
+    <li><a href="contacto.html"><i class="material-icons">mail</i>Contacto</a></li>
+  </ul>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- ══ HERO ════════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-accent-circle"></div>
+    <div class="hero-content container">
+      <div class="hero-tag">Proyecto Integrador I — Ingeniería de Sistemas</div>
+      <h1>
+        Diseño &amp;
+        <span class="highlight">Experiencia de Usuario</span>
+      </h1>
+      <p>
+        Exploramos, investigamos y construimos soluciones digitales centradas en las personas.
+        Nuestro proyecto integra principios de UX, accesibilidad e interacción para crear
+        interfaces que resuelven problemas reales.
+      </p>
+      <div class="hero-cta">
+        <a href="nosotros.html" class="btn btn-primary-custom waves-effect">Conocer el equipo</a>
+        <a href="avances.html" class="btn btn-outline-custom waves-effect">Ver avances</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ STATS ════════════════════════════════════════════════════════════ -->
+  <section class="section-block white">
+    <div class="container">
+      <div class="row" style="margin-bottom:0;">
+        <div class="col s12 m3 center-align fade-in">
+          <div style="padding:1.5rem 0;">
+            <div class="stat-number" data-target="4" data-suffix="" style="font-family:'Space Mono',monospace;font-size:3rem;font-weight:700;color:var(--accent);">0</div>
+            <div style="font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:.25rem;">Integrantes</div>
+          </div>
+        </div>
+        <div class="col s12 m3 center-align fade-in fade-in-delay-1">
+          <div style="padding:1.5rem 0;">
+            <div class="stat-number" data-target="5" data-suffix="" style="font-family:'Space Mono',monospace;font-size:3rem;font-weight:700;color:var(--accent);">0</div>
+            <div style="font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:.25rem;">Fases del proyecto</div>
+          </div>
+        </div>
+        <div class="col s12 m3 center-align fade-in fade-in-delay-2">
+          <div style="padding:1.5rem 0;">
+            <div class="stat-number" data-target="3" data-suffix="" style="font-family:'Space Mono',monospace;font-size:3rem;font-weight:700;color:var(--accent);">0</div>
+            <div style="font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:.25rem;">Prototipos creados</div>
+          </div>
+        </div>
+        <div class="col s12 m3 center-align fade-in fade-in-delay-3">
+          <div style="padding:1.5rem 0;">
+            <div class="stat-number" data-target="80" data-suffix="%" style="font-family:'Space Mono',monospace;font-size:3rem;font-weight:700;color:var(--accent);">0</div>
+            <div style="font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:.25rem;">Avance general</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT BRIEF ══════════════════════════════════════════════════════ -->
+  <section class="section-block light">
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s12 m6 fade-in">
+          <div class="section-label">Sobre el proyecto</div>
+          <h2 class="section-title">¿Qué estamos construyendo?</h2>
+          <p style="color:var(--text-muted);line-height:1.7;margin-bottom:1.5rem;">
+            UX·Lab es un proyecto académico orientado al estudio y aplicación de metodologías
+            de diseño centradas en el usuario. Trabajamos con design thinking, pruebas de
+            usabilidad y prototipado iterativo para resolver un problema real de nuestra comunidad.
+          </p>
+          <p style="color:var(--text-muted);line-height:1.7;margin-bottom:2rem;">
+            Combinamos herramientas como Figma, metodologías ágiles y tecnologías web para
+            dar vida a soluciones que priorizan la experiencia humana sobre la técnica.
+          </p>
+          <a href="objetivos.html" class="btn btn-primary-custom waves-effect">Ver objetivos</a>
+        </div>
+        <div class="col s12 m6 fade-in fade-in-delay-2">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;">
+            <div style="background:var(--primary);border-radius:4px;padding:1.75rem;color:white;">
+              <i class="material-icons" style="color:var(--accent);font-size:2rem;display:block;margin-bottom:.75rem;">search</i>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:.4rem;">Investigación</div>
+              <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin:0;line-height:1.5;">Análisis de usuarios y contexto</p>
+            </div>
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:4px;padding:1.75rem;">
+              <i class="material-icons" style="color:var(--accent);font-size:2rem;display:block;margin-bottom:.75rem;">design_services</i>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:.4rem;">Diseño</div>
+              <p style="font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.5;">Wireframes y prototipos</p>
+            </div>
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:4px;padding:1.75rem;">
+              <i class="material-icons" style="color:var(--accent);font-size:2rem;display:block;margin-bottom:.75rem;">people</i>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:.4rem;">Pruebas</div>
+              <p style="font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.5;">Usabilidad con usuarios reales</p>
+            </div>
+            <div style="background:var(--primary);border-radius:4px;padding:1.75rem;color:white;">
+              <i class="material-icons" style="color:var(--accent);font-size:2rem;display:block;margin-bottom:.75rem;">code</i>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:.4rem;">Implementación</div>
+              <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin:0;line-height:1.5;">Desarrollo web funcional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA BAND ═════════════════════════════════════════════════════════ -->
+  <section style="background:var(--accent);padding:3.5rem 0;">
+    <div class="container center-align">
+      <h3 style="font-family:'Syne',sans-serif;font-weight:800;color:var(--primary);margin:0 0 .75rem;font-size:1.8rem;">¿Tienes preguntas sobre el proyecto?</h3>
+      <p style="color:rgba(13,27,42,.7);margin:0 0 1.75rem;font-size:1rem;">Escríbenos y con gusto te respondemos.</p>
+      <a href="contacto.html" class="btn waves-effect" style="background:var(--primary);color:white;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;box-shadow:none;padding:0 2rem;height:46px;line-height:46px;">Contactar al equipo</a>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="footer-brand">UX·Lab</div>
+          <p class="footer-desc">Proyecto Integrador I — Ingeniería de Sistemas<br>Universidad del Valle, Sede Tuluá</p>
+        </div>
+        <div class="col s12 m4 offset-m4">
+          <div class="footer-label">Páginas</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="objetivos.html">Objetivos</a></li>
+            <li><a href="avances.html">Avances</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 UX·Lab — Proyecto Integrador I</span>
+        <span>Docente: Mg(c). Juan Pablo Pinillos Reina</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
